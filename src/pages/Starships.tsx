@@ -5,9 +5,16 @@ import StarshipCards from '../components/StarshipCards'
 const Starships = () => {
     return (
         <>
-            <NavBar />
-            <div className="mt-4">
-                <StarshipCards />
+            <div className="starship-detail-container">
+                <div className="stars"></div>
+                <div className="twinkling"></div>
+                <div className="clouds"></div>
+                <div className="content-ships">
+                    <NavBar />
+                    <div id="0" className="mt-4">
+                        <StarshipCards />
+                    </div>
+                </div>
             </div>
         </>
     )
