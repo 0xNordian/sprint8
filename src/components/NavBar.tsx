@@ -1,24 +1,18 @@
-import { useState } from "react"
+import Logger from "./Logger"
+import NavMenu from "./NavMenu"
 
 const NavBar = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
     return (
-        <div className="flex justify-center items-center">
-            <div className="w-1/4"></div>
-            <div className="w-1/2 grid place-content-center">
-                <img src="/public/starwars-logo.png" width={100} height={100} alt="StarWars Logo" />
+        <>
+            <div className="flex justify-center items-center">
+                <div className="w-1/4"></div>
+                <div className="w-1/2 grid place-content-center">
+                    <img src="/public/starwars-logo.png" width={150} height={150} alt="StarWars Logo" />
+                </div>
+                <Logger />
             </div>
-            <div className="w-1/4">
-                {isLoggedIn ? (
-                    <p>Log out</p>
-                ) : (
-                    <div className="flex justify-center gap-4">
-                        <div>Login</div>
-                        <div>Sign Up</div>
-                    </div>
-                )}
-            </div>
-        </div>
+            <NavMenu />
+        </>
     )
 }
 
