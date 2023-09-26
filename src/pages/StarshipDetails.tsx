@@ -1,6 +1,33 @@
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+
+//? Components
 import NavBar from '../components/NavBar'
 
+//? Stores
+import { useStarshipStore } from '../store/useStarshipStore'
+
+//? Types
+import { StarshipsTypes } from '../starshipsTypes'
+
 const StarshipDetails = () => {
+    const [starshipData, setStarshipData] = useState({} as StarshipsTypes)
+    const { starshipdetails = '' } = useParams()
+    const starships = useStarshipStore((state) => state.starships)
+    const decodedStarshipName = decodeURIComponent(starshipdetails)
+    const startshipImgId = decodedStarshipName.slice(32, -1)
+    console.log('startshipImgId: ', startshipImgId)
+    useEffect(() => {
+        const matchingStarship = starships.find(
+            (starship) => starship.url === decodedStarshipName,
+        )
+        if (matchingStarship) {
+            setStarshipData(matchingStarship)
+        } else {
+            throw new Error('No matching starship found')
+        }
+    }, [starships, decodedStarshipName])
+
     return (
         <>
             <div className="starship-detail-container">
@@ -15,54 +42,59 @@ const StarshipDetails = () => {
                         <div className="flex h-full w-full flex-col items-center gap-6">
                             <section className="flex flex-col items-center gap-y-4">
                                 <div className="my-12">
-                                    <h1>STARTSHIP NAME</h1>
+                                    <h1>{starshipData.name}</h1>
                                 </div>
                                 <figure className="mb-10 p-2">
                                     <img
-                                        src="/public/millenium-falcon.png"
-                                        alt=""
-                                        // className="h-[140px] w-[220px] bg-green-500"
+                                        src={
+                                            startshipImgId === '10'
+                                                ? '/public/millenium-falcon.png'
+                                                : `https://starwars-visualguide.com/assets/img/starships/${startshipImgId}.jpg`
+                                        }
+                                        alt={starshipData.name}
                                     />
                                 </figure>
                             </section>
                             <article className="">
                                 <ul className="text-md sm:text-lg md:text-xl lg:text-2xl">
                                     <li>
-                                        <strong>Model:</strong> Lorem ipsum
-                                        dolor sit.
+                                        <strong>Model:</strong>{' '}
+                                        {starshipData.model}
                                     </li>
                                     <li>
-                                        <strong>Starship Class:</strong> Lorem
-                                        ipsum dolor sit.
+                                        <strong>Starship Class:</strong>{' '}
+                                        {starshipData.starship_class}
                                     </li>
                                     <li>
-                                        <strong>Manufacturer:</strong> Lorem
-                                        ipsum dolor sit.
+                                        <strong>Manufacturer:</strong>{' '}
+                                        {starshipData.manufacturer}
                                     </li>
                                     <li>
-                                        <strong>Cost:</strong> Lorem ipsum dolor
+                                        <strong>Cost:</strong>{' '}
+                                        {starshipData.cost_in_credits}
                                         sit.
                                     </li>
                                 </ul>
                             </article>
 
-                            <section className="mt-4 flex flex-col gap-8">
+                            <article className="mt-4 flex flex-col gap-8">
                                 <div>
                                     <ul className="text-md sm:text-lg md:text-xl lg:text-2xl">
                                         <li>
-                                            <strong>Crew:</strong> 4
+                                            <strong>Crew:</strong>{' '}
+                                            {starshipData.crew}
                                         </li>
                                         <li>
                                             <strong>Passenger Capacity:</strong>{' '}
-                                            6
+                                            {starshipData.passengers}
                                         </li>
                                         <li>
                                             <strong>Cargo Capacity:</strong>{' '}
-                                            100000 TONS
+                                            {starshipData.cargo_capacity}
                                         </li>
                                         <li>
-                                            <strong>Consumables:</strong> 2
-                                            Months
+                                            <strong>Consumables:</strong>{' '}
+                                            {starshipData.consumables}
                                         </li>
                                     </ul>
                                 </div>
@@ -70,28 +102,30 @@ const StarshipDetails = () => {
                                 <div>
                                     <ul className="text-md sm:text-lg md:text-xl lg:text-2xl">
                                         <li>
-                                            <strong>Length:</strong> 34.37
-                                            METERS
+                                            <strong>Length:</strong>{' '}
+                                            {starshipData.length}
                                         </li>
                                         <li>
                                             <strong>
                                                 Max Atmosphere Speed:
                                             </strong>{' '}
-                                            1050 KM/H
+                                            {
+                                                starshipData.max_atmosphering_speed
+                                            }
                                         </li>
                                         <li>
                                             <strong>Hyperdrive Rating:</strong>{' '}
-                                            5
+                                            {starshipData.hyperdrive_rating}
                                         </li>
                                         <li>
                                             <strong>
                                                 Max Speed in Real Space:
                                             </strong>{' '}
-                                            75 MGLT
+                                            {starshipData.MGLT}
                                         </li>
                                     </ul>
                                 </div>
-                            </section>
+                            </article>
                             <section>
                                 <div className="text-md sm:text-lg md:text-xl lg:text-2xl">
                                     <p>Pilots:</p>

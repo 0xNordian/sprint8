@@ -9,7 +9,20 @@ const Home = () => {
                 <div className="clouds"></div>
                 <div className="content-ships">
                     <NavBar />
-                    <h1>Home</h1>
+                    <div className="video-container flex justify-center">
+                        {/* <img
+                            className="h-2/6"
+                            src="/public/starwars-intro.gif"
+                            alt="StarWars Intro"
+                        /> */}
+                        <video
+                            autoPlay
+                            controls={false}
+                            loop
+                            muted
+                            src="/public/SnapSave.io-Star Wars Intro HD 1080p.mp4"
+                        ></video>
+                    </div>
                 </div>
             </div>
         </>

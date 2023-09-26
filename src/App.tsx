@@ -4,6 +4,7 @@ import {
     Route,
     createRoutesFromElements,
     RouterProvider,
+    // useParams,
 } from 'react-router-dom'
 
 //? Pages
@@ -11,9 +12,11 @@ import RootLayout from './layouts/RootLayout'
 import Home from './pages/Home'
 import Starships from './pages/Starships'
 import StarshipDetails from './pages/StarshipDetails'
-import getStarShipDetails from './pages/StarshipDetails'
 
 function App() {
+    // const params = useParams<{ starshipdetails: string }>()
+    // const starshipUrl = decodeURIComponent(params.starshipdetails)
+
     const routes = createBrowserRouter(
         createRoutesFromElements(
             <Route path="/" element={<RootLayout />}>
@@ -22,7 +25,6 @@ function App() {
                 <Route
                     path="/starships/:starshipdetails"
                     element={<StarshipDetails />}
-                    loader={getStarShipDetails}
                 />
             </Route>,
         ),
