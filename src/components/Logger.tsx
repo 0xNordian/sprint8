@@ -7,7 +7,7 @@ const Logger = () => {
         setIsLoggedIn((prev) => !prev)
     }
     return (
-        <div className="mt-2 w-full sm:w-1/4">
+        <div className="mt-2 w-full md:w-1/4">
             {isLoggedIn ? (
                 <p onClick={logInHandler}>Log out</p>
             ) : (

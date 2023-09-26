@@ -4,7 +4,7 @@ import NavMenu from './NavMenu'
 const NavBar = () => {
     return (
         <>
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col md:flex-row items-center justify-center">
                 <div className="w-1/4"></div>
                 <div className="grid w-1/2 place-content-center">
                     <img

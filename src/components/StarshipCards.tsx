@@ -15,7 +15,7 @@ const StarshipCards = () => {
                 {starships.map((starship) => (
                     <div
                         key={starship.name}
-                        className="h-[5rem] sm:w-[80%] rounded-md bg-gray-700 bg-opacity-50"
+                        className="h-[5rem] rounded-md bg-gray-700 bg-opacity-50 sm:w-full"
                     >
                         <div className="flex h-full flex-col items-start justify-center pl-4">
                             <h2>{`${starship.name}`}</h2>
