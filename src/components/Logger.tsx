@@ -4,10 +4,10 @@ const Logger = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false)
 
     const logInHandler = () => {
-        setIsLoggedIn(prev => !prev)
+        setIsLoggedIn((prev) => !prev)
     }
     return (
-        <div className="w-1/4">
+        <div className="mt-2 w-full sm:w-1/4">
             {isLoggedIn ? (
                 <p onClick={logInHandler}>Log out</p>
             ) : (
