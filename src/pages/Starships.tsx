@@ -3,6 +3,9 @@ import NavBar from '../components/NavBar'
 import StarshipCards from '../components/StarshipCards'
 
 const Starships = () => {
+    const showLogger = true
+    const showNavMenu = true
+
     return (
         <>
             <div className="starship-detail-container">
@@ -10,7 +13,7 @@ const Starships = () => {
                 <div className="twinkling"></div>
                 <div className="clouds"></div>
                 <div className="content-ships">
-                    <NavBar />
+                    <NavBar showLogger={showLogger} showNavMenu={showNavMenu} />
                     <div id="0" className="mt-4">
                         <StarshipCards />
                     </div>

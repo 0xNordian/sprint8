@@ -3,6 +3,9 @@ import ScrollCarousel from '../components/ScrollCarousel'
 import ShimmerBorderCard from '../components/ShimmerBorderCard' // Update the import path
 
 const Home = () => {
+    const showLogger = true
+    const showNavMenu = true
+
     return (
         <>
             <div className="starship-detail-container">
@@ -10,7 +13,7 @@ const Home = () => {
                 <div className="twinkling"></div>
                 <div className="clouds"></div>
                 <div className="content-ships">
-                    <NavBar />
+                    <NavBar showLogger={showLogger} showNavMenu={showNavMenu} />
                     <div className="video-container flex justify-center">
                         {/* <img
                             className="h-2/6"

@@ -2,7 +2,12 @@ import { Link } from 'react-router-dom'
 import Logger from './Logger'
 import NavMenu from './NavMenu'
 
-const NavBar = () => {
+type NavMenuProps = {
+    showLogger: boolean
+    showNavMenu: boolean
+}
+
+const NavBar = ({ showLogger, showNavMenu }: NavMenuProps) => {
     return (
         <>
             <div className="navbar flex flex-col items-center justify-center md:flex-row">
@@ -17,9 +22,9 @@ const NavBar = () => {
                         />
                     </Link>
                 </div>
-                <Logger />
+                {showLogger && <Logger />}
             </div>
-            <NavMenu />
+            {showNavMenu && <NavMenu />}
         </>
     )
 }

@@ -1,19 +1,23 @@
-import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { useAuthStore } from '../stores/useAuthStore'
 
 const Logger = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const authStore = useAuthStore()
 
-    const logInHandler = () => {
-        setIsLoggedIn((prev) => !prev)
+    const logOutHandler = () => {
+        authStore.setLoggedIn(false)
+        authStore.setEmail('')
     }
     return (
         <div className="mt-2 w-full md:w-1/4">
-            {isLoggedIn ? (
-                <p onClick={logInHandler}>Log out</p>
+            {authStore.isLoggedIn ? (
+                <p onClick={logOutHandler}>Log out</p>
             ) : (
                 <div className="flex justify-center gap-4">
-                    <div onClick={logInHandler}>Login</div>
-                    <div>Sign Up</div>
+                    {/* <div onClick={logInHandler}>Login</div> */}
+                    <div onClick={logOutHandler}>
+                        <Link to="/signin">Sign in</Link>
+                    </div>
                 </div>
             )}
         </div>

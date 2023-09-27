@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
-import { useStarshipStore } from '../store/useStarshipStore'
+import { useStarshipStore } from '../stores/useStarshipStore'
 import { useNavigate } from 'react-router-dom'
+// import { useAuthStore } from '../stores/useAuthStore'
 
 //? Components
 import Button from './Button'
@@ -9,7 +10,10 @@ import ProgressBar from './ProgressBar'
 const StarshipCards = () => {
     const starships = useStarshipStore((state) => state.starships)
     const isLoading = useStarshipStore((state) => state.isLoading)
+    // const isLoading = useStarshipStore((state) => state.isLoading)
     const [page, setPage] = useState(1)
+
+    // const authStore = useAuthStore()
 
     useEffect(() => {
         useStarshipStore.getState().fetchStarships(page.toString())
@@ -56,7 +60,7 @@ const StarshipCards = () => {
                             onClick={() => handleCardClick(starship.url)}
                         >
                             <div className="flex h-full flex-col items-start justify-center pl-4">
-                                <h2>{`${starship.name}`}</h2>
+                                <h3>{`${starship.name}`}</h3>
                                 <p>{starship.model}</p>
                             </div>
                         </div>
@@ -69,7 +73,7 @@ const StarshipCards = () => {
             <div className="flex items-center justify-center gap-4">
                 {page <= 4 && page > 1 && (
                     <Button
-                        msg="back"
+                        msg="previous"
                         handleButtonClick={handleDecreaseClick}
                     />
                 )}

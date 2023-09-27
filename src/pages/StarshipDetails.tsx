@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import NavBar from '../components/NavBar'
 
 //? Stores
-import { useStarshipStore } from '../store/useStarshipStore'
+import { useStarshipStore } from '../stores/useStarshipStore'
 
 //? Types
 import { StarshipsTypes } from '../starshipsTypes'
@@ -16,7 +16,10 @@ const StarshipDetails = () => {
     const starships = useStarshipStore((state) => state.starships)
     const decodedStarshipName = decodeURIComponent(starshipdetails)
     const startshipImgId = decodedStarshipName.slice(32, -1)
-    console.log('startshipImgId: ', startshipImgId)
+
+    const showLogger = true
+    const showNavMenu = false
+
     useEffect(() => {
         const matchingStarship = starships.find(
             (starship) => starship.url === decodedStarshipName,
@@ -37,7 +40,10 @@ const StarshipDetails = () => {
                 <div className="content-ships">
                     <section className="flex h-full w-full flex-col items-center justify-center pb-8">
                         <div className="mt-6 w-10/12 ">
-                            <NavBar />
+                            <NavBar
+                                showLogger={showLogger}
+                                showNavMenu={showNavMenu}
+                            />
                         </div>
                         <div className="flex h-full w-full flex-col items-center gap-6">
                             <section className="flex flex-col items-center gap-y-4">

@@ -12,6 +12,7 @@ import RootLayout from './layouts/RootLayout'
 import Home from './pages/Home'
 import Starships from './pages/Starships'
 import StarshipDetails from './pages/StarshipDetails'
+import SignIn from './pages/SignIn'
 
 function App() {
     // const params = useParams<{ starshipdetails: string }>()
@@ -26,6 +27,7 @@ function App() {
                     path="/starships/:starshipdetails"
                     element={<StarshipDetails />}
                 />
+                <Route path="/signin" element={<SignIn />} />
             </Route>,
         ),
     )
