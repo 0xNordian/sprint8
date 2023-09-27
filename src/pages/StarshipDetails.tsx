@@ -52,6 +52,12 @@ const StarshipDetails = () => {
                                                 : `https://starwars-visualguide.com/assets/img/starships/${startshipImgId}.jpg`
                                         }
                                         alt={starshipData.name}
+                                        onError={(e) => {
+                                            const imgElement =
+                                                e.target as HTMLImageElement
+                                            imgElement.src =
+                                                '/public/starwars-no-picture-found.jpeg'
+                                        }}
                                     />
                                 </figure>
                             </section>
