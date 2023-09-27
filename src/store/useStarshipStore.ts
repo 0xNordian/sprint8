@@ -1,12 +1,13 @@
 import { create } from 'zustand'
 import axios from 'axios' // Import Axios
 import { StarshipsTypes } from '../starshipsTypes'
+// import { useState } from 'react'
 
 type State = {
     starships: StarshipsTypes[]
     isLoading: boolean
     error: Error | null
-    fetchStarships: () => Promise<void>
+    fetchStarships: (pageNumber: string) => Promise<void>
 }
 
 // Define the store and its initial state
@@ -16,10 +17,12 @@ export const useStarshipStore = create<State>((set) => ({
     error: null,
 
     // Action to fetch starships
-    fetchStarships: async () => {
+    fetchStarships: async (pageNumber) => {
+
         set({ isLoading: true, error: null })
         try {
-            const response = await axios.get('https://swapi.dev/api/starships') // Use axios.get
+            const response = await axios.get(`https://swapi.dev/api/starships/?page=${pageNumber}`)
+            // const response = await axios.get('https://swapi.dev/api/starships')
             if (response.status !== 200) {
                 throw new Error(`HTTP error! Status: ${response.status}`)
             }
