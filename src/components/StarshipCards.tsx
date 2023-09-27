@@ -6,9 +6,6 @@ import { useNavigate } from 'react-router-dom'
 import Button from './Button'
 import ProgressBar from './ProgressBar'
 
-//? Types
-// import StarshipsTypes from '../starshipsTypes'
-
 const StarshipCards = () => {
     const starships = useStarshipStore((state) => state.starships)
     const isLoading = useStarshipStore((state) => state.isLoading)
@@ -25,12 +22,18 @@ const StarshipCards = () => {
         navigate(`/starships/${encodeURIComponent(starshipUrl)}`)
     }
 
-    const handleButtonClick = () => {
-        const nextPage = page + 1;
+    const handleIncreaseClick = () => {
+        const nextPage = page + 1
         setPage(nextPage)
         useStarshipStore.getState().fetchStarships(nextPage.toString())
     }
 
+    const handleDecreaseClick = () => {
+        const backPage = page - 1
+        setPage(backPage)
+        useStarshipStore.getState().fetchStarships(backPage.toString())
+    }
+    console.log('page: ', page)
     return (
         <section className="">
             <div className="mt-2 flex flex-col justify-center gap-4">
@@ -48,8 +51,8 @@ const StarshipCards = () => {
                 ) : starships && starships.length > 0 ? (
                     starships.map((starship) => (
                         <div
-                        key={starship.name}
-                        className="h-[5rem] rounded-md bg-gray-700 bg-opacity-40 hover:text-[#E5B848] hover:bg-indigo-600 hover:bg-opacity-50 sm:w-full"
+                            key={starship.name}
+                            className="h-[5rem] rounded-md bg-gray-700 bg-opacity-40 hover:bg-indigo-600 hover:bg-opacity-50 hover:text-[#E5B848] sm:w-full"
                             onClick={() => handleCardClick(starship.url)}
                         >
                             <div className="flex h-full flex-col items-start justify-center pl-4">
@@ -62,12 +65,20 @@ const StarshipCards = () => {
                     <div>No starships available.</div>
                 )}
             </div>
-            <ProgressBar page={page}/>
-            <div className="flex justify-center items-center">
-                <Button
-                    msg="Give me more power!"
-                    handleButtonClick={handleButtonClick}
-                />
+            <ProgressBar page={page} />
+            <div className="flex items-center justify-center gap-4">
+                {page <= 4 && page > 1 && (
+                    <Button
+                        msg="back"
+                        handleButtonClick={handleDecreaseClick}
+                    />
+                )}
+                {page >= 1 && page < 4 && (
+                    <Button
+                        msg="next"
+                        handleButtonClick={handleIncreaseClick}
+                    />
+                )}
             </div>
         </section>
     )

@@ -1,6 +1,6 @@
-const Pilots = () => {
-    const pilots: string[] = []
-    return <div>Pilots</div>
-}
+// const Pilots = () => {
+//     const pilots: string[] = []
+//     return <div>Pilots</div>
+// }
 
-export default Pilots
+// export default Pilots

@@ -6,17 +6,7 @@ import { CardTypes } from '../CardTypes'
 const Example = () => {
     return (
         <div className="">
-            {/* <div className="flex h-48 items-center justify-center">
-                <span className="font-semibold uppercase text-neutral-500">
-                    Scroll down
-                </span>
-            </div> */}
             <HorizontalScrollCarousel />
-            {/* <div className="flex h-48 items-center justify-center">
-                <span className="font-semibold uppercase text-neutral-500">
-                    Scroll up
-                </span>
-            </div> */}
         </div>
     )
 }

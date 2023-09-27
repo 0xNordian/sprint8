@@ -1,5 +1,5 @@
 type btnProps = {
-    msg: string,
+    msg: string
     handleButtonClick: () => void
 }
 

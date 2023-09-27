@@ -23,36 +23,10 @@ const SteppedProgress = ({ page }: SteppedProgressProps) => {
         setStepsComplete(page)
     }, [page])
 
-    // const handleSetStep = (num: number) => {
-    //     if (
-    //         (stepsComplete === 0 && num === -1) ||
-    //         (stepsComplete === numSteps && num === 1)
-    //     ) {
-    //         return
-    //     }
-
-    //     setStepsComplete((pv: number) => pv + num)
-    // }
-
     return (
         <div className="px-4 py-4 ">
             <div className="mx-auto w-full max-w-2xl rounded-md p-8 shadow-lg">
                 <Steps numSteps={numSteps} stepsComplete={stepsComplete} />
-                {/* <div className="p-2 my-6 h-48 bg-gray-100 border-2 border-dashed border-gray-200 rounded-lg"></div> */}
-                {/* <div className="flex items-center justify-end gap-2">
-          <button
-            className="px-4 py-1 rounded hover:bg-gray-100 text-black"
-            onClick={() => handleSetStep(-1)}
-          >
-            Prev
-          </button>
-          <button
-            className="px-4 py-1 rounded bg-black text-white"
-            onClick={() => handleSetStep(1)}
-          >
-            Next
-          </button>
-        </div> */}
             </div>
         </div>
     )
@@ -92,6 +66,7 @@ const Step = ({ num, isActive }: StepProps) => {
     return (
         <div className="relative">
             <div
+                onClick={() => console.log('check clicked')}
                 className={`relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 text-sm font-semibold transition-colors duration-300 ${
                     isActive
                         ? 'border-indigo-600 bg-indigo-600 text-[#E5B848]'
@@ -124,7 +99,9 @@ const Step = ({ num, isActive }: StepProps) => {
                             exit={{ rotate: -180, opacity: 0 }}
                             transition={{ duration: 0.125 }}
                         >
-                            {num}
+                            <div onClick={() => console.log('num clicked')}>
+                                {num}
+                            </div>
                         </motion.span>
                     )}
                 </AnimatePresence>

@@ -1,7 +1,6 @@
 import { create } from 'zustand'
 import axios from 'axios' // Import Axios
 import { StarshipsTypes } from '../starshipsTypes'
-// import { useState } from 'react'
 
 type State = {
     starships: StarshipsTypes[]
@@ -18,10 +17,11 @@ export const useStarshipStore = create<State>((set) => ({
 
     // Action to fetch starships
     fetchStarships: async (pageNumber) => {
-
         set({ isLoading: true, error: null })
         try {
-            const response = await axios.get(`https://swapi.dev/api/starships/?page=${pageNumber}`)
+            const response = await axios.get(
+                `https://swapi.dev/api/starships/?page=${pageNumber}`,
+            )
             // const response = await axios.get('https://swapi.dev/api/starships')
             if (response.status !== 200) {
                 throw new Error(`HTTP error! Status: ${response.status}`)

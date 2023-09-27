@@ -1,15 +1,13 @@
-// ShimmerBorderCard.tsx
-
 import { FiCloudLightning } from 'react-icons/fi'
 import { motion } from 'framer-motion'
 
 type ShimmerCardType = {
     title: string
     msg: string
-    icon: string
+    icon?: string
 }
 
-const ShimmerBorderCard = ({ title, msg, icon }: ShimmerCardType) => {
+const ShimmerBorderCard = ({ title, msg }: ShimmerCardType) => {
     return (
         <div className="group relative mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-slate-800 p-0.5 transition-all duration-500 hover:scale-[1.01] hover:bg-slate-800/50">
             <div className="relative z-10 flex flex-col items-center justify-center overflow-hidden rounded-[7px] bg-slate-900 p-8 transition-colors duration-500 group-hover:bg-slate-800">
