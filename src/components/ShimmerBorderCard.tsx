@@ -1,13 +1,13 @@
 // ShimmerBorderCard.tsx
 
-import { FiCloudLightning } from 'react-icons/fi';
-import { motion } from 'framer-motion';
+import { FiCloudLightning } from 'react-icons/fi'
+import { motion } from 'framer-motion'
 
 type ShimmerCardType = {
-    title: string;
-    msg: string;
-    icon: string;
-};
+    title: string
+    msg: string
+    icon: string
+}
 
 const ShimmerBorderCard = ({ title, msg, icon }: ShimmerCardType) => {
     return (
@@ -18,9 +18,7 @@ const ShimmerBorderCard = ({ title, msg, icon }: ShimmerCardType) => {
                 <h4 className="relative z-10 mb-4 w-full text-3xl font-bold text-slate-50">
                     {title}
                 </h4>
-                <p className="relative z-10 text-slate-400">
-                    {msg}
-                </p>
+                <p className="relative z-10 text-slate-400">{msg}</p>
             </div>
 
             <motion.div
@@ -35,7 +33,7 @@ const ShimmerBorderCard = ({ title, msg, icon }: ShimmerCardType) => {
                 className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-200 via-indigo-200/0 to-indigo-200 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
             />
         </div>
-    );
-};
+    )
+}
 
-export default ShimmerBorderCard;
+export default ShimmerBorderCard
