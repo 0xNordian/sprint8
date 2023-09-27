@@ -140,7 +140,14 @@ const StarshipDetails = () => {
                             </article>
                             <section>
                                 <div className="text-md sm:text-lg md:text-xl lg:text-2xl">
-                                    <p>Pilots:</p>
+                                    {/* {starshipData && (
+                                        <div>
+                                            <p>Pilots:</p>
+                                            {starshipData.pilots.map((item) => (
+                                                <p key={item}>{item}</p>
+                                            ))}
+                                        </div>
+                                    )} */}
                                 </div>
                                 <figure>
                                     <img src="" alt="" />
