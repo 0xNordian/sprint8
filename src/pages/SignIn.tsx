@@ -32,7 +32,7 @@ const SignIn = () => {
             <div className="content-ships">
                 <NavBar showLogger={showLogger} showNavMenu={showNavMenu} />
                 <div className="mt-8 flex justify-center">
-                    <section className="h-auto w-[100%] rounded-[2rem] bg-white px-6 md:px-12 lg:px-18 xl:px-22 pb-4 text-stone-600 md:w-[50%]">
+                    <section className="h-auto w-[100%] rounded-[2rem] bg-white px-6 md:px-12 lg:px-18 xl:px-24 pb-4 text-stone-600 md:w-[50%]">
                         <div
                             id="header"
                             className="flex flex-col gap-4 pt-8 font-bold"
