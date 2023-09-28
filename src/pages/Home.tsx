@@ -12,7 +12,7 @@ const Home = () => {
                 <div className="stars"></div>
                 <div className="twinkling"></div>
                 <div className="clouds"></div>
-                <div className="content-ships">
+                <div className="flex flex-col gap-24 content-ships">
                     <NavBar showLogger={showLogger} showNavMenu={showNavMenu} />
                     <div className="video-container flex justify-center">
                         {/* <img
@@ -28,24 +28,24 @@ const Home = () => {
                             src="/public/SnapSave.io-Star Wars Intro HD 1080p.mp4"
                         ></video>
                     </div>
-                    <ScrollCarousel />
                     <section className="flex flex-wrap gap-8">
                         <ShimmerBorderCard
-                            title="Testa"
-                            msg="This is a test"
-                            icon="FiCloudLightning"
+                            title="Starships"
+                            msg="Discover all the starships of the fleets"
+                            icon="ships"
                         />
                         <ShimmerBorderCard
-                            title="Test"
-                            msg="This is a test"
-                            icon="FiCloudLightning"
+                            title="Characters"
+                            msg="Know all the characters of the saga"
+                            icon="characters"
                         />
                         <ShimmerBorderCard
-                            title="Another Title"
-                            msg="Another message"
-                            icon="FiCloudLightning"
+                            title="Planets"
+                            msg="Explore all the planets of the galaxy"
+                            icon="planets"
                         />
                     </section>
+                    <ScrollCarousel />
                 </div>
             </div>
         </>

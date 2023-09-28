@@ -1,18 +1,42 @@
-import { FiCloudLightning } from 'react-icons/fi'
+// import { FiCloudLightning } from 'react-icons/fi'
 import { motion } from 'framer-motion'
 
 type ShimmerCardType = {
     title: string
     msg: string
-    icon?: string
+    icon?: 'ships' | 'characters' | 'planets'
 }
 
-const ShimmerBorderCard = ({ title, msg }: ShimmerCardType) => {
+const ShimmerBorderCard = ({ title, msg, icon }: ShimmerCardType) => {
     return (
         <div className="group relative mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-slate-800 p-0.5 transition-all duration-500 hover:scale-[1.01] hover:bg-slate-800/50">
             <div className="relative z-10 flex flex-col items-center justify-center overflow-hidden rounded-[7px] bg-slate-900 p-8 transition-colors duration-500 group-hover:bg-slate-800">
-                <FiCloudLightning className="relative z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 p-4 text-7xl text-indigo-500" />
-
+                {/* <FiCloudLightning className="relative z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 p-4 text-7xl text-indigo-500" /> */}
+                {/* <SiStarship className="relative z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 p-4 text-7xl text-indigo-500" /> */}
+                {icon === 'ships' && (
+                    <img
+                        width={128}
+                        src="/public/Trade_Federation_Battleship_35413.png"
+                        alt="starships icon"
+                        className="pb-4"
+                    />
+                )}
+                {icon === 'characters' && (
+                    <img
+                        width={128}
+                        src="/public/darthvader.png"
+                        alt="characters icon"
+                        className="pb-4"
+                    />
+                )}
+                {icon === 'planets' && (
+                    <img
+                        width={128}
+                        src="/public/planets.png"
+                        alt="planets icon"
+                        className="pb-4"
+                    />
+                )}
                 <h4 className="relative z-10 mb-4 w-full text-3xl font-bold text-slate-50">
                     {title}
                 </h4>
