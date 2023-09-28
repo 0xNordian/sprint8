@@ -1,6 +1,6 @@
 import { motion, useTransform, useScroll } from 'framer-motion'
 import { useRef } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import { CardTypes } from '../CardTypes'
 
 const Example = () => {
@@ -21,7 +21,7 @@ const HorizontalScrollCarousel = () => {
 
     return (
         <section ref={targetRef} className="relative h-[300vh] lg:h-[200vh]">
-            <div className="sticky top-0 flex h-[50vh] lg:h-[90vh] items-center overflow-hidden">
+            <div className="sticky top-0 flex h-[50vh] lg:h-[40vh] items-center overflow-hidden">
                 <motion.div style={{ x }} className="flex gap-4">
                     {cards.map((card) => {
                         return <Card card={card} key={card.id} />

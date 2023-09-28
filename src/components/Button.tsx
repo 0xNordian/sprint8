@@ -1,6 +1,6 @@
 type btnProps = {
     msg: string
-    handleButtonClick: () => void
+    handleButtonClick?: () => void
 }
 
 const Button = ({ msg, handleButtonClick }: btnProps) => {

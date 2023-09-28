@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import NavBar from '../components/NavBar'
 import { useAuthStore } from '../stores/useAuthStore'
+import ButtonForm from '../components/ButtonForm'
 
 const SignIn = () => {
     const showLogger = true
@@ -51,12 +52,7 @@ const SignIn = () => {
                                     value={email}
                                     className="rounded-lg bg-slate-300 py-2 pl-2 placeholder-slate-500"
                                 />
-                                <button
-                                    type="submit"
-                                    className="rounded-3xl bg-[var(--secondary)]"
-                                >
-                                    Continue
-                                </button>
+                                <ButtonForm msg="Continue"/>
                             </div>
                         </form>
                         <hr className="mt-4" />
