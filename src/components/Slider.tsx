@@ -2,10 +2,10 @@ import ButtonForm from './ButtonForm'
 
 const Slider = () => {
     return (
-        <div className="carousel w-full border border-green-400">
+        <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative w-full">
                 <div className="relative flex items-center justify-center">
-                    <div className="absolute z-10 h-[80%] w-[90%] border border-yellow-400">
+                    <div className="absolute z-10 h-[80%] w-[90%]">
                         <img
                             src="https://lumiere-a.akamaihd.net/v1/images/107-ahsoka-logotitle-800_1ee3f65b.png?region=0,0,800,445"
                             alt="Ahsoka Logo"
@@ -17,7 +17,7 @@ const Slider = () => {
                             away, a reunion takes place.
                         </p>
                         <div className="absolute bottom-10 left-16 z-10 w-2/6">
-                            <ButtonForm msg="Stream now" />
+                            <ButtonForm msg="STREAM NOW" />
                         </div>
                     </div>
                     <img
@@ -38,8 +38,8 @@ const Slider = () => {
             </div>
             <div id="slide2" className="carousel-item relative w-full">
                 <div className="relative flex items-center justify-center">
-                    <div className="absolute z-10 h-[80%] w-[90%] border border-yellow-400">
-                        <div className="flex h-full w-7/12 flex-col px-20 pr-28 gap-6 justify-center">
+                    <div className="absolute z-10 h-[80%] w-[90%]">
+                        <div className="flex h-full w-7/12 flex-col justify-center gap-6 px-20 pr-28">
                             <h2 className="text-left">
                                 Ahsoka Tano Arrives in Fortnite
                             </h2>
@@ -48,7 +48,7 @@ const Slider = () => {
                                 Fortnite's latest Battle Pass.
                             </h3>
                             <div className="">
-                                <ButtonForm msg="Stream now" />
+                                <ButtonForm msg="READ MORE" />
                             </div>
                         </div>
                     </div>
@@ -70,17 +70,19 @@ const Slider = () => {
             </div>
             <div id="slide3" className="carousel-item relative w-full">
                 <div className="relative flex items-center justify-center">
-                    <div className="absolute z-10 h-[80%] w-[90%] border border-yellow-400">
-                        <div className="flex h-full w-7/12 flex-col px-20 pr-36 gap-6 justify-center">
+                    <div className="absolute z-10 h-[80%] w-[90%]">
+                        <div className="flex h-full w-7/12 flex-col justify-center gap-6 px-20 pr-36">
                             <h2 className="content-title text-left">
-                            How the ILM Model Shop Brought Ahsoka’s T-6 Jedi Shuttle to Life
+                                How the ILM Model Shop Brought Ahsoka’s T-6 Jedi
+                                Shuttle to Life
                             </h2>
                             <h3 className="text-left">
-                                The legendary Jedi is now unlockable in
-                                Fortnite's latest Battle Pass.
+                                Go behind the scenes with Industrial Light &
+                                Magic model maker John Goodson to explore
+                                Ahsoka’s Jedi shuttle.
                             </h3>
                             <div className="">
-                                <ButtonForm msg="Stream now" />
+                                <ButtonForm msg="READ MORE" />
                             </div>
                         </div>
                     </div>
