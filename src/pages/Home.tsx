@@ -16,18 +16,11 @@ const Home = () => {
                 <div className="clouds"></div>
                 <div className="content-ships flex flex-col z-[6]">
                     <NavBar showLogger={showLogger} showNavMenu={showNavMenu} />
-                    <div className="flex flex-col gap-8 pt-12">
+                    <div className="flex flex-col gap-8 pt-6">
                         <Slider />
-                        {/* <div className="video-container flex justify-center">
-                        <video
-                            autoPlay
-                            controls={false}
-                            loop
-                            muted
-                            src="/public/SnapSave.io-Star Wars Intro HD 1080p.mp4"
-                        ></video>
-                    </div> */}
+                    <div className="">
                         <AhsokaVideos />
+                    </div>
                         <section className="flex flex-wrap gap-8">
                             <ShimmerBorderCard
                                 title="Starships"

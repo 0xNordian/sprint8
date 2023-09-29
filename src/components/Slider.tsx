@@ -6,13 +6,13 @@ const Slider = () => {
             <div id="slide1" className="carousel-item relative w-full">
                 <div className="relative flex items-center justify-center">
                     <div className="absolute z-10 h-[80%] w-[90%]">
-                        <div className="flex h-full w-5/12 flex-col items-center justify-center gap-1">
+                        <div className="flex h-full w-5/12 flex-col items-center justify-center gap-1 lg:gap-6">
                             <div className="mt-0 flex h-1/3 w-full justify-center ">
                                 <img
                                     src="https://lumiere-a.akamaihd.net/v1/images/107-ahsoka-logotitle-800_1ee3f65b.png?region=0,0,800,445"
                                     alt="Ahsoka Logo"
                                     id="ahsoka-logo"
-                                    className="z-10 w-3/6"
+                                    className="z-10 w-3/6 lg:w-8/12 lg:h-[145px]"
                                 />
                             </div>
                             <div className="px-1 text-[.3rem] md:px-8 md:py-1 md:text-[0.7rem] lg:px-10 lg:py-2 lg:text-[1.1rem]">
