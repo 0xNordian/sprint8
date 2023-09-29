@@ -13,9 +13,9 @@ const Logger = () => {
             {authStore.isLoggedIn ? (
                 <p onClick={logOutHandler}>Log out</p>
             ) : (
-                <div className="flex justify-center gap-4">
+                <div className="flex justify-center gap-4 w-full">
                     {/* <div onClick={logInHandler}>Login</div> */}
-                    <div onClick={logOutHandler}>
+                    <div onClick={logOutHandler} className="flex justify-center">
                         <Link to="/signin">Sign in</Link>
                     </div>
                 </div>
