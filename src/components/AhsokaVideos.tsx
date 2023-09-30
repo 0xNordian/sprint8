@@ -3,10 +3,9 @@ const AhsokaVideos = () => {
         <>
             <section
                 id="ahsoka-videos"
-                className="md:relative md:h-[800px] lg:h-[930px] md:w-[100%]"
+                className="md:relative md:h-[800px] md:w-[100%] lg:h-[930px]"
             >
                 <figure className="md:absolute md:left-0 md:top-0 md:z-0 md:h-full md:w-full">
-                    {/* Make sure each image covers the entire section */}
                     <div>
                         <img
                             src="https://lumiere-a.akamaihd.net/v1/images/ahsoka-tentpole-desktop_87875115.jpeg?region=0,0,1600,600"
@@ -27,28 +26,65 @@ const AhsokaVideos = () => {
                             alt=""
                             className="hidden md:left-0 md:top-0 md:block md:h-auto md:w-full md:object-cover"
                         />
-                        <div className="flex items-center md:absolute md:bottom-0 md:left-0 md:z-0 md:h-full md:w-full">
-                            <ol className="flex w-full justify-evenly gap-6 ">
-                                {/* className="md:absolute h-[120px] w-[250px] bg-teal-500 md:bottom-15 md:left-24" */}
+                        <div className="hidden md:flex items-center md:absolute md:bottom-0 md:left-0 md:z-0 md:h-full md:w-full">
+                            <ol className="flex flex-col md:flex md:flex-row w-full justify-evenly gap-6 ">
                                 <li className="flex">
-                                    <div className="h-[120px] w-[150px] rounded-l-xl">
-                                        <img
-                                            src="https://lumiere-a.akamaihd.net/v1/images/ahsoka-106-extras_article-feature_200a55ad.jpeg?region=0%2C0%2C1600%2C900"
-                                            alt=""
-                                            className="rounded-l-xl object-cover w-auto h-[150px]"
-                                        />
-                                    </div>
-                                    <div className="h-[150px] w-[250px] rounded-r-xl bg-slate-600"></div>
+                                    <section>
+                                        <div className="flex items-center justify-start">
+                                            <img
+                                                src="https://lumiere-a.akamaihd.net/v1/images/ahsoka-106-extras_article-feature_200a55ad.jpeg?region=0%2C0%2C1600%2C900"
+                                                alt=""
+                                                className="h-[150px] w-[180px] rounded-s-lg object-cover"
+                                            />
+
+                                            <div className="relative flex h-[150px] w-[250px] flex-col rounded-e-lg bg-[#1D1E1F] px-[25px]">
+                                                <div className="h-full w-full">
+                                                    <div className="flex h-1/2 items-center justify-center">
+                                                        <h4 className="text-left text-[1rem] text-white">
+                                                            <strong>
+                                                                Ahsoka Extras:
+                                                                “Part Six: Far,
+                                                                Far Away{' '}
+                                                            </strong>
+                                                        </h4>
+                                                    </div>
+                                                    <div className="relative h-1/2 w-full">
+                                                        <div className="absolute bottom-0 right-0 h-[10px] w-[85px] rounded-t-lg bg-[#1D2730]"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
                                 </li>
+
                                 <li className="flex">
-                                    <div className="h-[120px] w-[150px] rounded-l-xl">
-                                        <img
-                                            src="https://lumiere-a.akamaihd.net/v1/images/ahsoka-part-6-highlights-_article-feature_648aff7e.jpeg?region=0%2C0%2C1600%2C900"
-                                            alt=""
-                                            className="rounded-l-xl object-cover w-auto h-[150px]"
-                                        />
-                                    </div>
-                                    <div className="h-[150px] w-[250px] rounded-r-xl bg-slate-600"></div>
+                                    <section>
+                                        <div className="flex items-center justify-start">
+                                            <img
+                                                src="https://lumiere-a.akamaihd.net/v1/images/ahsoka-part-6-highlights-_article-feature_648aff7e.jpeg?region=0%2C0%2C1600%2C900"
+                                                alt=""
+                                                className="h-[150px] w-[180px] rounded-s-lg object-cover"
+                                            />
+
+                                            <div className="relative flex h-[150px] w-[250px] flex-col rounded-e-lg bg-[#1D1E1F] px-[25px]">
+                                                <div className="h-full w-full">
+                                                    <div className="flex h-1/2 items-center justify-center">
+                                                        <h4 className="text-left text-[1rem] text-white">
+                                                            <strong>
+                                                                Ahsoka Analyzed:
+                                                                5 Highlights
+                                                                from “Part Six:
+                                                                Far, Far Away”{' '}
+                                                            </strong>
+                                                        </h4>
+                                                    </div>
+                                                    <div className="relative h-1/2 w-full">
+                                                        <div className="absolute bottom-0 right-0 h-[10px] w-[85px] rounded-t-lg bg-[#1D2730]"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
                                 </li>
                             </ol>
                         </div>
@@ -66,7 +102,6 @@ const AhsokaVideos = () => {
                                     src="https://lumiere-a.akamaihd.net/v1/images/107-ahsoka-logotitle-800_1ee3f65b.png?region=0,0,800,445"
                                     alt="Ahsoka Logo"
                                     id="ahsoka-logo"
-                                    // className="border border-cyan-500"
                                 />
                             </div>
                             <div className="md:text-xl lg:text-3xl">
