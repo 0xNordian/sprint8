@@ -80,7 +80,7 @@ const SignIn = () => {
                             <figure>
                                 <img
                                     className="h-8 w-auto"
-                                    src="/public/logo-parade.png"
+                                    src="logo-parade.png"
                                     alt=""
                                 />
                             </figure>

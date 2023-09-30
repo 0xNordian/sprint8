@@ -54,7 +54,7 @@ const StarshipDetails = () => {
                                     <img
                                         src={
                                             startshipImgId === '10'
-                                                ? '/public/millenium-falcon.png'
+                                                ? 'millenium-falcon.png'
                                                 : `https://starwars-visualguide.com/assets/img/starships/${startshipImgId}.jpg`
                                         }
                                         alt={starshipData.name}
@@ -62,7 +62,7 @@ const StarshipDetails = () => {
                                             const imgElement =
                                                 e.target as HTMLImageElement
                                             imgElement.src =
-                                                '/public/starwars-no-picture-found.jpeg'
+                                                'starwars-no-picture-found.jpeg'
                                         }}
                                     />
                                 </figure>

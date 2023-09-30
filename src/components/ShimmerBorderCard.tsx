@@ -16,7 +16,7 @@ const ShimmerBorderCard = ({ title, msg, icon }: ShimmerCardType) => {
                 {icon === 'ships' && (
                     <img
                         width={128}
-                        src="/public/Trade_Federation_Battleship_35413.png"
+                        src="Trade_Federation_Battleship_35413.png"
                         alt="starships icon"
                         className="pb-4"
                     />
@@ -24,7 +24,7 @@ const ShimmerBorderCard = ({ title, msg, icon }: ShimmerCardType) => {
                 {icon === 'characters' && (
                     <img
                         width={128}
-                        src="/public/darthvader.png"
+                        src="darthvader.png"
                         alt="characters icon"
                         className="pb-4"
                     />
@@ -32,7 +32,7 @@ const ShimmerBorderCard = ({ title, msg, icon }: ShimmerCardType) => {
                 {icon === 'planets' && (
                     <img
                         width={128}
-                        src="/public/planets.png"
+                        src="planets.png"
                         alt="planets icon"
                         className="pb-4"
                     />

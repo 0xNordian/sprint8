@@ -62,43 +62,43 @@ export default Example
 
 const cards = [
     {
-        url: '/public/x-wing.png',
+        url: 'x-wing.png',
         title: 'X-Wing',
         href: '/starships/https%3A%2F%2Fswapi.dev%2Fapi%2Fstarships%2F12%2F',
         id: 1,
     },
     {
-        url: '/public/millenium-falcon.png',
+        url: 'millenium-falcon.png',
         title: 'Millenium Falcon',
         href: '/starships/https%3A%2F%2Fswapi.dev%2Fapi%2Fstarships%2F10%2F',
         id: 2,
     },
     {
-        url: '/public/executor-dark.png',
+        url: 'executor-dark.png',
         title: 'Executor',
         href: '/starships/https%3A%2F%2Fswapi.dev%2Fapi%2Fstarships%2F15%2F',
         id: 3,
     },
     {
-        url: '/public/tie-fighter.webp',
+        url: 'tie-fighter.webp',
         title: 'Tie Fighter',
         href: '/starships/https%3A%2F%2Fswapi.dev%2Fapi%2Fstarships%2F13%2F',
         id: 4,
     },
     {
-        url: '/public/Death-Star.png',
+        url: 'Death-Star.png',
         title: 'Death Star',
         href: '/starships/https%3A%2F%2Fswapi.dev%2Fapi%2Fstarships%2F9%2F',
         id: 5,
     },
     {
-        url: '/public/sentinel-class.webp',
+        url: 'sentinel-class.webp',
         title: 'Sentinel Class',
         href: '/starships/https%3A%2F%2Fswapi.dev%2Fapi%2Fstarships%2F5%2F',
         id: 6,
     },
     {
-        url: '/public/Y-wing.webp',
+        url: 'Y-wing.webp',
         title: 'Y-Wing',
         href: '/starships/https%3A%2F%2Fswapi.dev%2Fapi%2Fstarships%2F11%2F',
         id: 7,

@@ -123,11 +123,12 @@
 /* Rest of your CSS remains the same */
 
 .stars {
-    background: #000 url(/public/stars.png) repeat top center;
+    background: #000 url(stars.png) repeat top center;
+    /* background: #000 url(/public/stars.png) repeat top center; */
     z-index: 1;
 }
 .twinkling {
-    background: transparent url(/public/twinkling.png) repeat top center;
+    background: transparent url(twinkling.png) repeat top center;
     z-index: 2;
     -moz-animation: move-twink-back 200s linear infinite;
     -ms-animation: move-twink-back 200s linear infinite;
@@ -136,7 +137,7 @@
     animation: move-twink-back 200s linear infinite;
 }
 .clouds {
-    background: transparent url(/public/clouds.png) repeat top center;
+    background: transparent url(clouds.png) repeat top center;
     z-index: 5;
     pointer-events: none;
     -moz-animation: move-clouds-back 200s linear infinite;
