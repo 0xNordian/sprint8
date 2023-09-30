@@ -54,7 +54,7 @@ const StarshipDetails = () => {
                                     <img
                                         src={
                                             startshipImgId === '10'
-                                                ? 'millenium-falcon.png'
+                                                ? '/millenium-falcon.png'
                                                 : `https://starwars-visualguide.com/assets/img/starships/${startshipImgId}.jpg`
                                         }
                                         alt={starshipData.name}
