@@ -104,12 +104,11 @@ const AhsokaVideos = () => {
                                     id="ahsoka-logo"
                                 />
                             </div>
-                            <div className="md:text-xl lg:text-3xl">
-                                Hera must answer to the New Republic, while far,
-                                far away, a reunion takes place.
+                            <div className="md:text-xl lg:text-2xl lg:mb-4">
+                                Ahsoka Tano investigates an emerging threat to the galaxy.
                             </div>
                             <div className="md:mt-4">
-                                <button className="bg-[var(--secondary)] text-[.8rem] text-stone-600 md:rounded-3xl md:px-4 md:py-2 lg:px-8 lg:py-4">
+                                <button className="bg-[var(--secondary)] text-[.8rem] text-stone-600 md:rounded-3xl md:px-4 md:py-2 lg:px-8 lg:py-3">
                                     STREAM NOW
                                 </button>
                             </div>

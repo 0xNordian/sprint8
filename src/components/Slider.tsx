@@ -19,7 +19,7 @@ const Slider = () => {
                                 Hera must answer to the New Republic, while far, far away, a reunion takes place.
                             </div>
                             <div className="flex w-full justify-center ">
-                                <button className="rounded-3xl bg-[var(--secondary)] text-[.3rem] text-stone-600 md:text-[0.5rem] lg:text-[0.8rem]">
+                                <button className="rounded-3xl bg-[var(--secondary)] text-[.3rem] text-stone-600 md:text-[0.5rem] lg:text-[0.8rem] lg:py-3 lg:px-8">
                                     STREAM NOW
                                 </button>
                             </div>
