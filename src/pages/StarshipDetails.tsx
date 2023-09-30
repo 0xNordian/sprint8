@@ -62,7 +62,7 @@ const StarshipDetails = () => {
                                             const imgElement =
                                                 e.target as HTMLImageElement
                                             imgElement.src =
-                                                'starwars-no-picture-found.jpeg'
+                                                '/starwars-no-picture-found.jpeg'
                                         }}
                                     />
                                 </figure>

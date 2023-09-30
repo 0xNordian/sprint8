@@ -15,7 +15,7 @@ const NavBar = ({ showLogger, showNavMenu }: NavMenuProps) => {
                 <div className="grid w-1/2 place-content-center">
                     <Link to="/">
                         <img
-                            src="public/starwars-logo.png"
+                            src="/starwars-logo.png"
                             width={150}
                             height={150}
                             alt="StarWars Logo"
