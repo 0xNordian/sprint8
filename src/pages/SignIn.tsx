@@ -2,27 +2,27 @@ import { useState } from 'react'
 import NavBar from '../components/NavBar'
 import { useAuthStore } from '../stores/useAuthStore'
 import ButtonForm from '../components/ButtonForm'
+import { useNavigate } from 'react-router-dom'
 
 const SignIn = () => {
     const showLogger = true
     const showNavMenu = false
     const [email, setEmail] = useState('')
-
-    // Use the auth store
     const authStore = useAuthStore()
+    const navigate = useNavigate();
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault() // Prevent page reload
+        e.preventDefault() 
         if (!email) {
-            alert('Please enter your email.') // Show an alert if no email is entered
+            alert('Please enter your email.') 
             return
         }
+
         authStore.setEmail(email)
         authStore.setLoggedIn(true)
-    }
 
-    // Redirect to the home page
-    // history.push('/')
+        navigate('/');
+    }
 
     return (
         <div className="starship-detail-container">

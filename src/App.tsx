@@ -4,7 +4,7 @@ import {
     Route,
     createRoutesFromElements,
     RouterProvider,
-    // useParams,
+    Navigate,
 } from 'react-router-dom'
 
 //? Pages
@@ -15,17 +15,21 @@ import StarshipDetails from './pages/StarshipDetails'
 import SignIn from './pages/SignIn'
 
 function App() {
-    // const params = useParams<{ starshipdetails: string }>()
-    // const starshipUrl = decodeURIComponent(params.starshipdetails)
+    const isLoggedIn = localStorage.getItem('loggedIn') === 'true' || false
 
     const routes = createBrowserRouter(
         createRoutesFromElements(
             <Route path="/" element={<RootLayout />}>
                 <Route index element={<Home />} />
-                <Route path="/starships" element={<Starships />} />
+                <Route
+                    path="/starships"
+                    element={isLoggedIn ? <Starships /> : <Navigate to="/" />}
+                />
                 <Route
                     path="/starships/:starshipdetails"
-                    element={<StarshipDetails />}
+                    element={
+                        isLoggedIn ? <StarshipDetails /> : <Navigate to="/" />
+                    }
                 />
                 <Route path="/signin" element={<SignIn />} />
             </Route>,
