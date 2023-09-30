@@ -15,14 +15,14 @@ const AhsokaVideos = () => {
                     </div>
                     <div>
                         <img
-                            src="/public/ahsoka-tentpole-desktop-gumstick_840a96c4.jpeg"
+                            src="public/ahsoka-tentpole-desktop-gumstick_840a96c4.jpeg"
                             alt=""
                             className="hidden md:left-0 md:top-0 md:block md:h-auto md:w-full md:object-cover"
                         />
                     </div>
                     <div className="md:relative md:bottom-0 md:left-0 md:z-0 md:h-auto md:w-full">
                         <img
-                            src="/public/ahsoka-tentpole-anchor-starmap_2cb18246.jpeg"
+                            src="public/ahsoka-tentpole-anchor-starmap_2cb18246.jpeg"
                             alt=""
                             className="hidden md:left-0 md:top-0 md:block md:h-auto md:w-full md:object-cover"
                         />
