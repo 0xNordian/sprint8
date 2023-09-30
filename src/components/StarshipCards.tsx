@@ -37,7 +37,7 @@ const StarshipCards = () => {
         setPage(backPage)
         useStarshipStore.getState().fetchStarships(backPage.toString())
     }
-    console.log('page: ', page)
+    // console.log('page: ', page)
     return (
         <section className="">
             <div className="mt-2 flex flex-col justify-center gap-4">
