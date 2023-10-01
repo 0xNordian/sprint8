@@ -1,4 +1,4 @@
-type btnProps = {
+export type btnProps = {
     msg: string
     handleButtonClick?: () => void
 }
