@@ -19,7 +19,7 @@ const NotFoundPage = () => {
                         <p className="text-lg xl:text-[2rem]">Occurred, a 404 error has.</p>
                     </div>
                     <Link to="/" className="mt-4 text-[1rem] xl:text-[1.8rem]">
-                        <Button msg="Go back to the force" />  
+                        <Button msg="Back to the Force, the way is." />  
                     </Link>
                 </main>
             </div>
