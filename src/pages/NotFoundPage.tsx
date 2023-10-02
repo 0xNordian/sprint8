@@ -10,7 +10,7 @@ const NotFoundPage = () => {
             <div className="content-ships z-[6]">
                 <main className="flex flex-col justify-center items-center gap-6 xl:gap-12 h-[800px] lg:h-[900px] xl:h-[1000px] w-auto box-border">
                     <img
-                        src="/public/yoda.png"
+                        src="/yoda.png"
                         alt="Yoda"
                         className="w-1/2 md:w-1/3 xl:w-2/6"
                     />
