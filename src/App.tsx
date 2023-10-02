@@ -17,6 +17,9 @@ import { useEffect } from 'react'
 import { useAuthStore } from './stores/useAuthStore'
 import NotFoundPage from './pages/NotFoundPage'
 
+//? Components
+import usePageVisibility from './hooks/usePageVisibility'
+
 function App() {
     const isLoggedIn = localStorage.getItem('loggedIn') === 'true' || false
     const authStore = useAuthStore()
@@ -44,6 +47,8 @@ function App() {
             </Route>,
         ),
     )
+
+    usePageVisibility();
 
     return (
         <>
