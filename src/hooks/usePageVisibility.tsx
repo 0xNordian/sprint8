@@ -29,7 +29,7 @@ const usePageVisibility = () => {
             const isVisible = document.visibilityState === 'visible';
             if (!isVisible) {
                 document.title = "I find your lack of faith disturbing. Come back!";
-                changeFavicon('git ad/darth-vader-force-grip.png');
+                changeFavicon('/darth-vader-force-grip.png');
             } else {
                 document.title = "StarWars Starships";
                 changeFavicon('/mf-favicon.png');
