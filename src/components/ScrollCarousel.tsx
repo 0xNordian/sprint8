@@ -1,6 +1,5 @@
 import { motion, useTransform, useScroll } from 'framer-motion'
 import { useRef } from 'react'
-// import { Link } from 'react-router-dom'
 import { CardTypes } from '../CardTypes'
 
 const Example = () => {
@@ -20,7 +19,7 @@ const HorizontalScrollCarousel = () => {
     const x = useTransform(scrollYProgress, [0, 1], ['1%', '-95%'])
 
     return (
-        <section ref={targetRef} className="relative h-[300vh] lg:h-[200vh]">
+        <section ref={targetRef} className="relative h-[320vh] lg:h-[200vh]">
             <div className="sticky top-0 flex h-[50vh] lg:h-[40vh] items-center overflow-hidden">
                 <motion.div style={{ x }} className="flex gap-4">
                     {cards.map((card) => {
@@ -36,23 +35,23 @@ const Card = ({ card }: { card: CardTypes }) => {
     return (
         <div
             key={card.id}
-            className="group relative h-32 w-32 md:h-64 md:w-64 lg:h-[450px] lg:w-[450px] overflow-hidden"
+            className="group relative h-32 w-32 overflow-hidden md:h-64 md:w-64 lg:h-[450px] lg:w-[450px]"
         >
             {/* <Link to={card.href} className="absolute inset-0 z-20"> */}
-                <div
-                    style={{
-                        backgroundImage: `url(${card.url})`,
-                        // backgroundSize: '350px',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat',
-                    }}
-                    className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110 bg-[length:120px_120px] md:bg-[length:200px_200px] lg:bg-[length:300px_300px]"
-                ></div>
-                <div className="absolute inset-0 z-10 grid place-content-center">
-                    <p className="text-md bg-gradient-to-br from-white/20 to-white/0 p-3 font-black uppercase text-white backdrop-blur-lg">
-                        {card.title}
-                    </p>
-                </div>
+            <div
+                style={{
+                    backgroundImage: `url(${card.url})`,
+                    // backgroundSize: '350px',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                }}
+                className="absolute inset-0 z-0 bg-[length:120px_120px] transition-transform duration-300 group-hover:scale-110 md:bg-[length:200px_200px] lg:bg-[length:300px_300px]"
+            ></div>
+            <div className="absolute inset-0 z-10 grid place-content-center">
+                <p className="text-md bg-gradient-to-br from-white/20 to-white/0 p-3 font-black uppercase text-white backdrop-blur-lg">
+                    {card.title}
+                </p>
+            </div>
             {/* </Link> */}
         </div>
     )

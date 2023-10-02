@@ -151,3 +151,14 @@
     position: relative;
     z-index: 4;
 }
+
+.carousel-container {
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Add smooth scrolling behavior */
+    scrollbar-width: none; /* Hide the scrollbar */
+    -ms-overflow-style: none; /* Hide the scrollbar in IE/Edge */
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar in WebKit-based browsers */
+}

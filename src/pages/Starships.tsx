@@ -1,4 +1,5 @@
 //? Components
+import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 import StarshipCards from '../components/StarshipCards'
 
@@ -16,6 +17,9 @@ const Starships = () => {
                     <NavBar showLogger={showLogger} showNavMenu={showNavMenu} />
                     <div id="0" className="mt-4">
                         <StarshipCards />
+                    </div>
+                    <div className="mt-12 md:mt-24">
+                    <Footer />
                     </div>
                 </div>
             </div>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1696204078257" clover="3.2.0">
-  <project timestamp="1696204078257" name="All files">
-    <metrics statements="117" coveredstatements="62" conditionals="4" coveredconditionals="2" methods="5" coveredmethods="1" elements="126" coveredelements="65" complexity="0" loc="117" ncloc="117" packages="2" files="4" classes="4"/>
+<coverage generated="1696209852950" clover="3.2.0">
+  <project timestamp="1696209852950" name="All files">
+    <metrics statements="124" coveredstatements="62" conditionals="4" coveredconditionals="2" methods="5" coveredmethods="1" elements="133" coveredelements="65" complexity="0" loc="124" ncloc="124" packages="2" files="4" classes="4"/>
     <package name="components">
-      <metrics statements="94" coveredstatements="45" conditionals="3" coveredconditionals="1" methods="3" coveredmethods="1"/>
+      <metrics statements="101" coveredstatements="45" conditionals="3" coveredconditionals="1" methods="3" coveredmethods="1"/>
       <file name="Logger.tsx" path="/Users/ntorres/Documents/Full-Stack/IT Academy/sprint8/src/components/Logger.tsx">
-        <metrics statements="39" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="46" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -43,8 +43,15 @@
         <line num="35" count="0" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
       </file>
       <file name="NavBar.tsx" path="/Users/ntorres/Documents/Full-Stack/IT Academy/sprint8/src/components/NavBar.tsx">
         <metrics statements="32" coveredstatements="32" conditionals="3" coveredconditionals="1" methods="1" coveredmethods="1"/>

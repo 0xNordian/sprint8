@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar'
 import { useAuthStore } from '../stores/useAuthStore'
 import ButtonForm from '../components/ButtonForm'
 import { useNavigate } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 const SignIn = () => {
     const showLogger = true
@@ -87,6 +88,7 @@ const SignIn = () => {
                         </div>
                     </section>
                 </div>
+            <Footer />
             </div>
         </div>
     )

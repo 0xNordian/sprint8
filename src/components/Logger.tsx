@@ -16,12 +16,19 @@ const Logger = () => {
     }
 
     return (
-        <div className="mt-2 w-full md:w-1/4">
+        <div className="mt-3 w-full md:w-1/4">
             {authStore.isLoggedIn ? (
-                <p onClick={() => {
-                    logOutHandler()
-                    resetLocalStorage()
-                }}>Log out</p>
+                <div className="flex w-full justify-center gap-4">
+                    <div
+                        onClick={() => {
+                            logOutHandler()
+                            resetLocalStorage()
+                        }}
+                        className="flex justify-center"
+                    >
+                        <div>Log out</div>
+                    </div>
+                </div>
             ) : (
                 <div className="flex w-full justify-center gap-4">
                     <div

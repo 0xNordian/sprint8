@@ -1,6 +1,8 @@
 import AhsokaVideos from '../components/AhsokaVideos'
+import DaisyCarousel from '../components/DaisyCarousel'
+import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
-import ScrollCarousel from '../components/ScrollCarousel'
+// import ScrollCarousel from '../components/ScrollCarousel'
 import ShimmerBorderCard from '../components/ShimmerBorderCard' // Update the import path
 import Slider from '../components/Slider'
 
@@ -38,7 +40,9 @@ const Home = () => {
                                 icon="planets"
                             />
                         </section>
-                        <ScrollCarousel />
+                        {/* <ScrollCarousel /> */}
+                        <DaisyCarousel />
+                        <Footer />
                     </div>
                 </div>
             </div>
