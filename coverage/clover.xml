@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1696213249886" clover="3.2.0">
-  <project timestamp="1696213249886" name="All files">
+<coverage generated="1696233042015" clover="3.2.0">
+  <project timestamp="1696233042015" name="All files">
     <metrics statements="286" coveredstatements="224" conditionals="6" coveredconditionals="4" methods="7" coveredmethods="3" elements="299" coveredelements="231" complexity="0" loc="286" ncloc="286" packages="2" files="6" classes="6"/>
     <package name="components">
       <metrics statements="263" coveredstatements="207" conditionals="5" coveredconditionals="3" methods="5" coveredmethods="3"/>
-      <file name="Button.tsx" path="/Users/ntorres/Documents/Full-Stack/IT Academy/sprint8/src/components/Button.tsx">
+      <file name="Button.tsx" path="/Users/nordian/Documents/Full Stack/IT Academy/projects/Sprint8/src/components/Button.tsx">
         <metrics statements="22" coveredstatements="22" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -29,7 +29,7 @@
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
       </file>
-      <file name="Logger.tsx" path="/Users/ntorres/Documents/Full-Stack/IT Academy/sprint8/src/components/Logger.tsx">
+      <file name="Logger.tsx" path="/Users/nordian/Documents/Full Stack/IT Academy/projects/Sprint8/src/components/Logger.tsx">
         <metrics statements="46" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -78,7 +78,7 @@
         <line num="45" count="1" type="stmt"/>
         <line num="46" count="1" type="stmt"/>
       </file>
-      <file name="NavBar.tsx" path="/Users/ntorres/Documents/Full-Stack/IT Academy/sprint8/src/components/NavBar.tsx">
+      <file name="NavBar.tsx" path="/Users/nordian/Documents/Full Stack/IT Academy/projects/Sprint8/src/components/NavBar.tsx">
         <metrics statements="32" coveredstatements="32" conditionals="3" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -113,7 +113,7 @@
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
       </file>
-      <file name="NavMenu.tsx" path="/Users/ntorres/Documents/Full-Stack/IT Academy/sprint8/src/components/NavMenu.tsx">
+      <file name="NavMenu.tsx" path="/Users/nordian/Documents/Full Stack/IT Academy/projects/Sprint8/src/components/NavMenu.tsx">
         <metrics statements="23" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -139,7 +139,7 @@
         <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
       </file>
-      <file name="Slider.tsx" path="/Users/ntorres/Documents/Full-Stack/IT Academy/sprint8/src/components/Slider.tsx">
+      <file name="Slider.tsx" path="/Users/nordian/Documents/Full Stack/IT Academy/projects/Sprint8/src/components/Slider.tsx">
         <metrics statements="140" coveredstatements="140" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -285,7 +285,7 @@
     </package>
     <package name="stores">
       <metrics statements="23" coveredstatements="17" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="0"/>
-      <file name="useAuthStore.ts" path="/Users/ntorres/Documents/Full-Stack/IT Academy/sprint8/src/stores/useAuthStore.ts">
+      <file name="useAuthStore.ts" path="/Users/nordian/Documents/Full Stack/IT Academy/projects/Sprint8/src/stores/useAuthStore.ts">
         <metrics statements="23" coveredstatements="17" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>

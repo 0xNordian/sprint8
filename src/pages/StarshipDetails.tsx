@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 
 //? Components
 import NavBar from '../components/NavBar'
@@ -52,6 +53,11 @@ const StarshipDetails = () => {
                             <section className="flex flex-col items-center gap-y-4">
                                 <div className="my-12">
                                     <h1>{starshipData.name}</h1>
+                                    <Link to="/starships">
+                                        <button className="mt-4 rounded-lg bg-gray-900 px-4 py-2 text-white">
+                                            Back to Starships
+                                        </button>
+                                    </Link>
                                 </div>
                                 <figure className="mb-10 p-2">
                                     <img
