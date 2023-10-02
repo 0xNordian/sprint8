@@ -16,13 +16,14 @@ const Home = () => {
                 <div className="stars"></div>
                 <div className="twinkling"></div>
                 <div className="clouds"></div>
-                <div className="content-ships flex flex-col z-[6]">
+                <div className="content-ships z-[6] flex flex-col">
                     <NavBar showLogger={showLogger} showNavMenu={showNavMenu} />
                     <div className="flex flex-col gap-8 pt-6">
                         <Slider />
-                    <div className="">
-                        <AhsokaVideos />
-                    </div>
+                        <DaisyCarousel />
+                        <div className="">
+                            <AhsokaVideos />
+                        </div>
                         <section className="flex flex-wrap gap-8">
                             <ShimmerBorderCard
                                 title="Starships"
@@ -41,7 +42,6 @@ const Home = () => {
                             />
                         </section>
                         {/* <ScrollCarousel /> */}
-                        <DaisyCarousel />
                         <Footer />
                     </div>
                 </div>

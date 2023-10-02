@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for stores/useAuthStore.ts</title>
+    <title>Code coverage report for components/Button.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">stores</a> useAuthStore.ts</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">components</a> Button.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">73.91% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/23</span>
+                <span class='fraction'>22/22</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">73.91% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>17/23</span>
+                <span class='fraction'>22/22</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -85,8 +85,7 @@
 <a name='L20'></a><a href='#L20'>20</a>
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
-<a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L23'></a><a href='#L23'>23</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -100,38 +99,36 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { create } from 'zustand'
-&nbsp;
-type State = {
-    email: string | null
-    isLoggedIn: boolean
-    setEmail: (email: string) =&gt; void
-    setLoggedIn: (loggedIn: boolean) =&gt; void
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export type btnProps = {
+    msg: string
+    handleButtonClick?: () =&gt; void
 }
 &nbsp;
-export const useAuthStore = create&lt;State&gt;((set) =&gt; ({
-    email: localStorage.getItem('email') || null,
-    isLoggedIn: localStorage.getItem('loggedIn') === 'true' || false,
+const Button = ({ msg, handleButtonClick }: btnProps) =&gt; {
+    return (
+        &lt;div className="group relative w-fit transition-transform duration-300 active:scale-95"&gt;
+            &lt;button
+                onClick={handleButtonClick}
+                className="relative z-10 rounded-lg bg-gradient-to-br from-indigo-500 to-fuchsia-500 p-0.5 duration-300 group-hover:scale-110"
+            &gt;
+                &lt;span className="block rounded-md bg-slate-950 px-4 py-2 font-semibold text-slate-100 duration-300 group-hover:bg-slate-950/50 group-hover:text-slate-50 group-active:bg-slate-950/80"&gt;
+                    {msg}
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;span className="pointer-events-none absolute -inset-4 z-0 transform-gpu rounded-2xl bg-gradient-to-br from-indigo-500 to-fuchsia-500 opacity-30 blur-xl transition-all duration-300 group-hover:opacity-90 group-active:opacity-50" /&gt;
+        &lt;/div&gt;
+    )
+}
 &nbsp;
-    setEmail: <span class="fstat-no" title="function not covered" >(email) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        set({ email })</span>
-<span class="cstat-no" title="statement not covered" >        localStorage.setItem('email', email)</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
-&nbsp;
-    setLoggedIn: <span class="fstat-no" title="function not covered" >(loggedIn) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        set({ isLoggedIn: loggedIn })</span>
-<span class="cstat-no" title="statement not covered" >        localStorage.setItem('loggedIn', loggedIn.toString())</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
-}))
+export default Button
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

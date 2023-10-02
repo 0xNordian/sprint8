@@ -40,8 +40,7 @@ const SignIn = () => {
                         >
                             <h3 className="">Enter your email</h3>
                             <p className="text-left">
-                                Log into your Star Wars account. If you don't
-                                have one, you will be prompted to create one.
+                            To access the Star Wars Starships universe, enter your email and click continue. You'll be redirected to the home page to explore the fleet.
                             </p>
                         </div>
                         <form onSubmit={handleSubmit}>
