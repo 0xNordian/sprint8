@@ -3,7 +3,7 @@ const AhsokaVideos = () => {
         <>
             <section
                 id="ahsoka-videos"
-                className="md:relative md:h-[800px] md:w-[100%] lg:h-[930px]"
+                className="md:relative md:h-[580px] md:w-[100%] lg:h-[780px] xl:h-[980px]"
             >
                 <figure className="md:absolute md:left-0 md:top-0 md:z-0 md:h-full md:w-full">
                     <div>
@@ -26,21 +26,21 @@ const AhsokaVideos = () => {
                             alt=""
                             className="hidden md:left-0 md:top-0 md:block md:h-auto md:w-full md:object-cover"
                         />
-                        <div className="hidden md:flex items-center md:absolute md:bottom-0 md:left-0 md:z-0 md:h-full md:w-full">
-                            <ol className="flex flex-col md:flex md:flex-row w-full justify-evenly gap-6 ">
+                        <div className="hidden items-center md:absolute md:bottom-0 md:left-0 md:z-0 md:flex md:h-full md:w-full">
+                            <ol className="flex w-full flex-col justify-evenly gap-6 md:flex md:flex-row ">
                                 <li className="flex">
                                     <section>
                                         <div className="flex items-center justify-start">
                                             <img
                                                 src="https://lumiere-a.akamaihd.net/v1/images/ahsoka-106-extras_article-feature_200a55ad.jpeg?region=0%2C0%2C1600%2C900"
                                                 alt=""
-                                                className="h-[150px] w-[180px] rounded-s-lg object-cover"
+                                                className="h-[120px] w-[140px] rounded-s-lg object-cover md:h-[130px] md:w-[150px] lg:h-[180px] lg:w-[200px]"
                                             />
 
-                                            <div className="relative flex h-[150px] w-[250px] flex-col rounded-e-lg bg-[#1D1E1F] px-[25px]">
+                                            <div className="relative flex h-[120px] w-[150px] md:h-[130px] md:w-[160px] lg:h-[180px] lg:w-[240px] flex-col rounded-e-lg bg-[#1D1E1F] px-[25px]">
                                                 <div className="h-full w-full">
                                                     <div className="flex h-1/2 items-center justify-center">
-                                                        <h4 className="text-left text-[1rem] text-white">
+                                                        <h4 className="pt-4 text-left text-[.6rem] md:text-[.7rem] lg:text-[1.1rem] text-white">
                                                             <strong>
                                                                 Ahsoka Extras:
                                                                 “Part Six: Far,
@@ -63,13 +63,13 @@ const AhsokaVideos = () => {
                                             <img
                                                 src="https://lumiere-a.akamaihd.net/v1/images/ahsoka-part-6-highlights-_article-feature_648aff7e.jpeg?region=0%2C0%2C1600%2C900"
                                                 alt=""
-                                                className="h-[150px] w-[180px] rounded-s-lg object-cover"
+                                                className="h-[120px] w-[140px] rounded-s-lg object-cover md:h-[130px] md:w-[150px] lg:h-[180px] lg:w-[200px]"
                                             />
 
-                                            <div className="relative flex h-[150px] w-[250px] flex-col rounded-e-lg bg-[#1D1E1F] px-[25px]">
+                                            <div className="relative flex h-[120px] w-[150px] md:h-[130px] md:w-[160px] lg:h-[180px] lg:w-[240px] flex-col rounded-e-lg bg-[#1D1E1F] px-[25px]">
                                                 <div className="h-full w-full">
                                                     <div className="flex h-1/2 items-center justify-center">
-                                                        <h4 className="text-left text-[1rem] text-white">
+                                                        <h4 className="pt-4 text-left text-[.6rem] md:text-[.7rem] lg:text-[1.1rem] text-white">
                                                             <strong>
                                                                 Ahsoka Analyzed:
                                                                 5 Highlights
@@ -104,8 +104,9 @@ const AhsokaVideos = () => {
                                     id="ahsoka-logo"
                                 />
                             </div>
-                            <div className="md:text-xl lg:text-2xl lg:mb-4">
-                                Ahsoka Tano investigates an emerging threat to the galaxy.
+                            <div className="md:text-xl lg:mb-4 lg:text-2xl">
+                                Ahsoka Tano investigates an emerging threat to
+                                the galaxy.
                             </div>
                             <div className="md:mt-4">
                                 <button className="bg-[var(--secondary)] text-[.8rem] text-stone-600 md:rounded-3xl md:px-4 md:py-2 lg:px-8 lg:py-3">
