@@ -37,7 +37,12 @@ const StarshipCards = () => {
         setPage(backPage)
         useStarshipStore.getState().fetchStarships(backPage.toString())
     }
-    // console.log('page: ', page)
+
+    const handleClickedStep = (clickedPage: number) => {
+        setPage(clickedPage)
+        useStarshipStore.getState().fetchStarships(clickedPage.toString())
+    }
+
     return (
         <section className="">
             <div className="mt-2 flex flex-col justify-center gap-4">
@@ -69,20 +74,25 @@ const StarshipCards = () => {
                     <div>No starships available.</div>
                 )}
             </div>
-            <ProgressBar page={page} />
-            <div className="flex items-center justify-center gap-4">
-                {page <= 4 && page > 1 && (
-                    <Button
-                        msg="previous"
-                        handleButtonClick={handleDecreaseClick}
-                    />
-                )}
-                {page >= 1 && page < 4 && (
-                    <Button
-                        msg="next"
-                        handleButtonClick={handleIncreaseClick}
-                    />
-                )}
+            <div className="flex flex-col items-center justify-center sm:block">
+                <ProgressBar
+                    page={page}
+                    handleClickedStep={handleClickedStep}
+                />
+                <div className="flex items-center justify-center gap-12">
+                    {page <= 4 && page > 1 && (
+                        <Button
+                            msg="previous"
+                            handleButtonClick={handleDecreaseClick}
+                        />
+                    )}
+                    {page >= 1 && page < 4 && (
+                        <Button
+                            msg="next"
+                            handleButtonClick={handleIncreaseClick}
+                        />
+                    )}
+                </div>
             </div>
         </section>
     )
