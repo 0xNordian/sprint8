@@ -15,6 +15,7 @@ import StarshipDetails from './pages/StarshipDetails'
 import SignIn from './pages/SignIn'
 import { useEffect } from 'react'
 import { useAuthStore } from './stores/useAuthStore'
+import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
     const isLoggedIn = localStorage.getItem('loggedIn') === 'true' || false
@@ -39,6 +40,7 @@ function App() {
                     }
                 />
                 <Route path="/signin" element={<SignIn />} />
+                <Route path="*" element={<NotFoundPage />} />
             </Route>,
         ),
     )
